@@ -139,6 +139,8 @@ section{padding:100px 0;scroll-margin-top:88px}
 .project-title{font-size:21px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
 .project-desc{font-size:13px;color:var(--text-s);line-height:1.65;margin-bottom:18px}
 .project-case{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-bottom:18px}
+/* Com número ímpar de itens, o último ocupa a linha toda (sem espaço vazio) */
+.project-case>div:last-child:nth-child(odd){grid-column:1/-1}
 .case-label{font-size:9.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-m);margin-bottom:4px}
 .case-value{font-size:12px;color:var(--text-s);line-height:1.45}
 .project-info .project-tags{margin:0 0 18px;gap:5px}.project-info .tag{font-size:10.5px;padding:2px 9px}
@@ -302,12 +304,12 @@ footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;font-
       <div class="section-eyebrow">Quem sou</div>
       <h2 class="section-title">Desenvolvedora <br> Full Stack</h2>
       <p class="section-body">Desenvolvendo soluções que integram front-end de qualidade com back-end.</p>
-      <div class="sobre-text">
-        <p>Meu nome é Nicole Alves Gonçalves, tenho 17 anos e estudo no <strong>SESI Diadema</strong> e no curso técnico em <strong>Desenvolvimento de Sistemas pelo SENAI</strong>. Tenho interesse em tecnologia, desenvolvimento web e criação de sistemas funcionais e intuitivos.</p>
-        <p>Busco compreender as necessidades de cada projeto para desenvolver soluções organizadas e eficientes, unindo <strong>lógica de programação, criatividade e atenção aos detalhes</strong>.</p>
-        <p>Tenho conhecimentos em <strong>HTML, CSS, JavaScript, PHP, Laravel, Java, Python e bancos de dados</strong>, além de experiência prática em projetos acadêmicos de desenvolvimento de sistemas.</p>
-        <p>Busco minha primeira oportunidade como <strong>Jovem Aprendiz na área de tecnologia</strong>, com o objetivo de aplicar meus conhecimentos, adquirir experiência profissional e evoluir como desenvolvedora.</p>
-      </div>
+<div class="sobre-text">
+  <p>Sou <strong>Nicole Alves Gonçalves</strong>, estudante do SESI Diadema e do curso técnico em <strong>Desenvolvimento de Sistemas pelo SENAI</strong>. Sou apaixonada por tecnologia, desenvolvimento web e pela criação de sistemas funcionais e intuitivos.</p>
+  <p>Busco compreender as necessidades de cada projeto para desenvolver soluções organizadas e eficientes, unindo <strong>lógica de programação, criatividade e atenção aos detalhes</strong>.</p>
+  <p>Tenho conhecimentos em <strong>HTML, CSS, JavaScript, PHP, Laravel, Java, Python e Bancos de Dados</strong>, desenvolvidos na prática através de projetos acadêmicos.</p>
+  <p>Atualmente, busco minha primeira oportunidade como <strong>Jovem Aprendiz em Tecnologia</strong> para aplicar meus conhecimentos, evoluir como desenvolvedora e gerar impacto em projetos reais.</p>
+</div>
     </div>
     <div class="sobre-cards">
       <div class="sobre-card"><span class="sobre-card-icon">⬡</span><h4>Foco em Front-end</h4><p>Interfaces bem construídas, responsivas e acessíveis.</p></div>
@@ -396,12 +398,11 @@ footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;font-
       <div class="project-info">
         <div class="project-num">01 / Trabalho de Conclusão de Curso</div>
         <h3 class="project-title">StockLog</h3>
-        <p class="project-desc">Projeto de TCC desenvolvido para enfrentar um desafio recorrente na indústria: informações de produção e estoque espalhadas por papéis e planilhas desconectadas. Esse modelo dificulta o acompanhamento dos pedidos, aumenta o retrabalho e pode gerar divergências entre o saldo registrado e o estoque físico. O StockLog reúne pedidos de produção, estoque e logística em um único ambiente para tornar o fluxo de trabalho mais organizado e rastreável.</p>
+        <p class="project-desc">TCC que reúne pedidos de produção, estoque e logística em um só ambiente, no lugar de papéis e planilhas soltas, para deixar o fluxo mais organizado e rastreável.</p>
         <div class="project-case">
-          <div><div class="case-label">Problema</div><div class="case-value">Controles manuais podem causar retrabalho, falhas de comunicação e diferenças entre o estoque físico e o registrado.</div></div>
-          <div><div class="case-label">Solução</div><div class="case-value">Centralização dos pedidos de produção, informações de estoque e etapas logísticas, com acompanhamento por Kanban e calendário.</div></div>
-          <div><div class="case-label">Diferenciais</div><div class="case-value">Chatbot de apoio, leitura de QR Code e visualização do andamento dos pedidos.</div></div>
-          <div><div class="case-label">Objetivo</div><div class="case-value">Melhorar a rastreabilidade das informações e dar mais visibilidade ao fluxo de produção.</div></div>
+          <div><div class="case-label">Problema</div><div class="case-value">Controles manuais geram retrabalho e divergência de estoque.</div></div>
+          <div><div class="case-label">Solução</div><div class="case-value">Pedidos, estoque e logística centralizados, com Kanban e calendário.</div></div>
+          <div><div class="case-label">Diferenciais</div><div class="case-value">Chatbot de apoio, leitura de QR Code e acompanhamento dos pedidos.</div></div>
         </div>
         <div class="project-tags"><span class="tag">TCC SENAI</span><span class="tag">Produção</span><span class="tag">Estoque</span><span class="tag">Logística</span><span class="tag">Kanban</span><span class="tag">Chatbot</span><span class="tag">QR Code</span></div>
         <div class="access">
@@ -425,12 +426,11 @@ footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;font-
       <div class="project-info">
         <div class="project-num">02 / Sistema de Gestão Integrada</div>
         <h3 class="project-title">ERP Empresarial</h3>
-        <p class="project-desc">Interface de um ERP empresarial organizada em módulos para reunir diferentes rotinas em uma experiência integrada. O painel apresenta áreas de controle de estoque, financeiro e fluxo de caixa, fiscal e compliance, CRM e vendas, suprimentos, gestão de equipes, logística e WMS, BI e Analytics, projetos e serviços e portal self-service. A proposta é facilitar a localização das ferramentas e dar uma visão mais organizada dos processos empresariais.</p>
+        <p class="project-desc">Interface de ERP modular que reúne 10 áreas, como estoque, financeiro, CRM e logística, em um painel com navegação centralizada.</p>
         <div class="project-case">
-          <div><div class="case-label">Abrangência</div><div class="case-value">10 áreas, de estoque e finanças a CRM, logística, analytics e autoatendimento.</div></div>
-          <div><div class="case-label">Objetivo</div><div class="case-value">Reunir o acesso aos principais processos empresariais em um único ambiente.</div></div>
-          <div><div class="case-label">Organização</div><div class="case-value">Módulos separados por área, com cartões de acesso e navegação centralizada.</div></div>
-          <div><div class="case-label">Foco do projeto</div><div class="case-value">Estrutura modular da interface e apresentação clara das funcionalidades.</div></div>
+          <div><div class="case-label">Abrangência</div><div class="case-value">De estoque e finanças a analytics e autoatendimento.</div></div>
+          <div><div class="case-label">Organização</div><div class="case-value">Módulos por área, com cartões de acesso.</div></div>
+          <div><div class="case-label">Foco</div><div class="case-value">Estrutura modular e apresentação clara das funções.</div></div>
         </div>
         <div class="project-tags"><span class="tag">ERP</span><span class="tag">Sistema Web</span><span class="tag">Gestão de dados</span><span class="tag">Interface</span></div>
         <a href="https://santanaazss.github.io/Projeto-certo-ERP/public/pages/index.html" target="_blank" rel="noopener" class="project-link">Acessar o sistema ↗</a>
@@ -448,12 +448,11 @@ footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;font-
       <div class="project-info">
         <div class="project-num">03 / Sistema de Gestão de Estoque</div>
         <h3 class="project-title">EcoMercado</h3>
-        <p class="project-desc">Sistema de gestão de estoque desenvolvido em PHP com Laravel, pensado para organizar produtos e apoiar o acompanhamento das operações de um mercado. O painel reúne alertas de estoque baixo ou crítico, ranking de produtos mais vendidos e informações de produtos importados. Também consome a AwesomeAPI para consultar cotações de moedas em tempo real e converter valores em dólar, euro e libra para reais, facilitando a visualização estimada dos preços em BRL.</p>
+        <p class="project-desc">Sistema de estoque em PHP/Laravel com alertas de reposição, ranking de vendas e conversão de moedas (USD, EUR e GBP para BRL) via AwesomeAPI.</p>
         <div class="project-case">
-          <div><div class="case-label">Necessidade</div><div class="case-value">Organizar o estoque e identificar produtos que precisam de reposição.</div></div>
-          <div><div class="case-label">Recursos</div><div class="case-value">Alertas de estoque, ranking de vendas e dados de produtos importados.</div></div>
-          <div><div class="case-label">Integração</div><div class="case-value">AwesomeAPI para consultar USD, EUR e GBP e converter valores para BRL.</div></div>
-          <div><div class="case-label">Disponibilidade</div><div class="case-value">Aplicação PHP/Laravel executada localmente; não está publicada para acesso público.</div></div>
+          <div><div class="case-label">Necessidade</div><div class="case-value">Organizar o estoque e identificar o que precisa de reposição.</div></div>
+          <div><div class="case-label">Recursos</div><div class="case-value">Alertas de estoque, ranking de vendas e produtos importados.</div></div>
+          <div><div class="case-label">Disponibilidade</div><div class="case-value">Executado localmente, sem acesso público.</div></div>
         </div>
         <div class="project-tags"><span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">Blade</span><span class="tag">MySQL</span><span class="tag">AwesomeAPI</span><span class="tag">JavaScript</span></div>
         <span class="project-link project-link-disabled" aria-label="O EcoMercado está disponível apenas em ambiente local">Projeto local · sem acesso público</span>
